@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body style="background:#fff">
+    <center>
+        <div class="box" style="width:400px;height:500px; background-color:orangered;margin-top: 70px; box-shadow: 5px 5px 5px #000;border-radius: 10px;">
+            <h2 style="font-size:45px;color:blue;padding-top: 20px;">Calculator</h2>
+            <input type="text" id="display" style="width:360px;height:70px;outline:none;border-radius:10px;font-size: 30px;"><br><br>
+            <input type="button" value="C" onclick="clearMe()" style="background-color:deeppink;width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="1" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="2" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="+" onclick="calculate(this.value)" style="background-color: crimson;width:80px;height:50px;font-size:45px;border-radius:10px"><br><br>
+            <input type="button" value="3" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="4" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="5" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="-" onclick="calculate(this.value)" style="background-color: green;width:80px;height:50px;font-size:45px;border-radius:10px"><br><br>
+            <input type="button" value="6" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="7" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="8" onclick="calculate(this.value)"style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="*" onclick="calculate(this.value)" style="background-color: blue;width:80px;height:50px;font-size:45px;border-radius:10px"><br><br>
+            <input type="button" value="9" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="0" onclick="calculate(this.value)" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="=" onclick="answer()" style="width:80px;height:50px;font-size:45px;border-radius:10px">
+            <input type="button" value="/" onclick="calculate(this.value)" style="background-color: coral;width:80px;height:50px;font-size:45px;border-radius:10px">
+        </div>
+    </center>
+    <script>
+        function clearMe(){
+            document.getElementById("display").value=" ";
+        }
+        function calculate(data){
+            document.getElementById("display").value +=data;
+        }
+        function answer(){
+            var a=document.getElementById("display").value;
+            var b=eval(a);
+            document.getElementById("display").value=b;
+        }
+    </script>
+    </body>
+</html>
